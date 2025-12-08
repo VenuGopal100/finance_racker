@@ -1,0 +1,504 @@
+/* client/src/styles/global.css */
+/* Basic, clean, modern layout using plain CSS */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+  color: #111827;
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+/* Header + Nav */
+
+.app-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  text-decoration: none;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  color: #4b5563;
+  transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.nav-link:hover {
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
+  transform: translateY(-1px);
+}
+
+.nav-link-active {
+  background: #111827;
+  color: #f9fafb;
+  border-color: #111827;
+}
+
+/* Main layout */
+
+.app-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Cards */
+
+.card {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.card h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.card p {
+  margin-bottom: 0.75rem;
+  color: #374151;
+}
+
+.card-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Transactions page layout */
+
+.transactions-page {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.6fr);
+  gap: 1.5rem;
+}
+
+/* Form */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.form-row label {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.input,
+select {
+  padding: 0.55rem 0.7rem;
+  border-radius: 0.6rem;
+  border: 1px solid #d1d5db;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.1s ease, box-shadow 0.1s ease;
+}
+
+.input:focus,
+select:focus {
+  border-color: #111827;
+  box-shadow: 0 0 0 2px rgba(17, 24, 39, 0.1);
+}
+
+/* Buttons */
+
+.btn-primary,
+.btn-secondary {
+  padding: 0.55rem 1rem;
+  border-radius: 0.7rem;
+  border: none;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.btn-primary {
+  background: #111827;
+  color: #f9fafb;
+}
+
+.btn-primary:hover {
+  background: #020617;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.3);
+  transform: translateY(-1px);
+}
+
+.btn-primary:disabled {
+  opacity: 0.7;
+  cursor: default;
+  box-shadow: none;
+  transform: none;
+}
+
+.btn-secondary {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.btn-secondary:hover {
+  background: #d1d5db;
+}
+
+/* Table */
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.table th,
+.table td {
+  padding: 0.55rem 0.6rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.table th {
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Tags */
+
+.tag-income,
+.tag-expense {
+  display: inline-flex;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+
+.tag-income {
+  background: rgba(22, 163, 74, 0.08);
+  color: #15803d;
+}
+
+.tag-expense {
+  background: rgba(220, 38, 38, 0.08);
+  color: #b91c1c;
+}
+
+/* Errors */
+
+.error-text {
+  color: #b91c1c;
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+
+/* Footer */
+
+.app-footer {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* Responsive */
+
+@media (max-width: 880px) {
+  .transactions-page {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .app {
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1.2rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .nav {
+    gap: 0.6rem;
+  }
+}
+/* client/src/styles/global.css */
+
+/* RESET / BASICS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+  color: #111827;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.app-root {
+  min-height: 100vh;
+}
+
+/* GENERIC LAYOUT */
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.card {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  margin-bottom: 1.5rem;
+}
+
+/* BUTTONS */
+.btn-primary,
+.btn-secondary {
+  border: none;
+  border-radius: 999px;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.25);
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
+}
+
+.btn-secondary {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.btn-secondary:hover {
+  background: #d1d5db;
+}
+
+/* INPUTS */
+input,
+select,
+textarea {
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+  padding: 0.45rem 0.65rem;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 1px #2563eb33;
+}
+
+/* ERROR TEXT */
+.error-text {
+  color: #b91c1c;
+  margin-top: 0.5rem;
+}
+
+/* DASHBOARD PAGE */
+.dashboard-page {
+  padding: 1.5rem;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.dashboard-header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.dashboard-header p {
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+.dashboard-filters {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dashboard-filters select,
+.dashboard-filters .year-input {
+  min-width: 110px;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.summary-card {
+  padding: 1.3rem 1.4rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+  background: #ffffff;
+}
+
+.summary-label {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 0.35rem;
+}
+
+.summary-value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.summary-sub {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* Subtle color accents */
+.income-card {
+  border-left: 4px solid #16a34a;
+}
+
+.expense-card {
+  border-left: 4px solid #dc2626;
+}
+
+.balance-card {
+  border-left: 4px solid #2563eb;
+}
+
+/* Placeholder section for charts */
+.dashboard-charts-placeholder h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-charts-placeholder p {
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+/* TRANSACTIONS PAGE (if you used similar class name) */
+.transactions-page {
+  padding: 1.5rem;
+}
+
+.card-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dashboard-filters {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .dashboard-page,
+  .transactions-page {
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1.1rem;
+  }
+}
