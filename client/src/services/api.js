@@ -1,18 +1,19 @@
 // client/src/services/api.js
-// Axios instance used for all API calls (transactions, budgets, summary).
+// Central Axios instance for calling the backend API.
 
 import axios from "axios";
 
-// For development: VITE_API_BASE_URL will be something like "http://localhost:5000/api"
-// For production: it will be your deployed backend URL, e.g. "https://finance-backend.onrender.com/api"
-const API_BASE_URL =
-  import.meta.env.VITE_API_BASE_URL || "http://localhost:5000/api";
+// 1. In development (local), we'll use localhost.
+// 2. In production (Vercel), we'll set VITE_API_URL to the Render URL.
+
+const baseURL =
+  import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+
+// For your deployed app, set in Vercel:
+// VITE_API_URL = "https://finance-racker.onrender.com/api"
 
 const api = axios.create({
-  baseURL: API_BASE_URL,
+  baseURL,
 });
-
-// Optional: you can log the base URL once to confirm
-// console.log("API base URL:", API_BASE_URL);
 
 export default api;
