@@ -1,10 +1,22 @@
-Finance Tracker (MERN Stack)
+💰 Finance Tracker – MERN Stack Application
 
-A full-stack Finance Tracker web application built using the MERN stack that helps users manage income, expenses, budgets, and view monthly financial summaries through a clean dashboard.
+A full-stack Finance Tracker web application built using the MERN stack.
+This app helps users track income and expenses, set monthly budgets, and view a financial summary through a clean, modern dashboard.
 
-🔗 Live Demo
-Frontend: (Vercel URL here)
-Backend: https://finance-racker.onrender.com
+✅ Fully developed, integrated, and deployed.
+
+🌐 Live Deployment (Try It Now)
+
+🔹 Live Frontend (User Interface)
+👉 https://your-frontend-name.vercel.app
+
+🔹 Live Backend (API Service)
+👉 https://finance-racker.onrender.com
+
+🔹 Sample API Endpoint
+👉 https://finance-racker.onrender.com/api/transactions
+
+Anyone can open the frontend link in a browser and use the application directly.
 
 🚀 Features
 
@@ -12,13 +24,15 @@ Backend: https://finance-racker.onrender.com
 
 ✅ View all transactions in real time
 
-✅ Monthly summary (total income, expenses, balance)
+✅ Monthly financial summary (income, expense, balance)
 
-✅ Set and manage monthly budgets
+✅ Set and update monthly budgets
 
-✅ Dashboard with overview & recent transactions
+✅ Dashboard with recent transactions
 
-✅ Fully deployed (Frontend + Backend + Database)
+✅ REST API integration
+
+✅ Fully deployed frontend, backend, and database
 
 🛠 Tech Stack
 Frontend
@@ -48,23 +62,23 @@ finance_racker/
 │
 ├── client/                 # Frontend (React + Vite)
 │   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── services/
-│   │   └── styles/
+│   │   ├── components/     # Reusable UI components
+│   │   ├── pages/          # Pages (Dashboard, Transactions, Budgets)
+│   │   ├── services/       # Axios API setup
+│   │   └── styles/         # Global & component styles
 │   └── vite.config.js
 │
 ├── server/                 # Backend (Node + Express)
 │   ├── src/
-│   │   ├── controllers/
-│   │   ├── models/
-│   │   ├── routes/
-│   │   └── index.js
+│   │   ├── controllers/    # Business logic
+│   │   ├── models/         # Mongoose schemas
+│   │   ├── routes/         # API routes
+│   │   └── index.js        # Server entry point
 │   └── package.json
 │
 └── README.md
 
-🌐 API Endpoints
+🌍 API Endpoints
 Transactions
 
 GET /api/transactions – Fetch all transactions
@@ -79,59 +93,88 @@ Budgets
 
 GET /api/budgets?month=MM&year=YYYY
 
-POST /api/budgets – Set or update monthly budget
+POST /api/budgets – Create or update monthly budget
 
 ⚙️ Environment Variables
 Backend (server/.env)
-MONGO_URI=your_mongodb_atlas_url
+MONGO_URI=your_mongodb_atlas_connection_string
 PORT=5000
 
 Frontend (Vercel Environment Variable)
 VITE_API_URL=https://finance-racker.onrender.com/api
 
-▶️ Run Locally
-1️⃣ Backend
+▶️ Run the Project Locally
+1️⃣ Start Backend
 cd server
 npm install
 npm run dev
 
-2️⃣ Frontend
+
+Backend runs at:
+http://localhost:5000
+
+2️⃣ Start Frontend
 cd client
 npm install
 npm run dev
 
 
-Frontend will run on:
+Frontend runs at:
 http://localhost:5173
 
-Backend will run on:
-http://localhost:5000
+🚢 Deployment Details
 
-📦 Deployment
+Frontend → Vercel
 
-Backend deployed using Render
+Backend → Render
 
-Frontend deployed using Vercel
+Database → MongoDB Atlas
 
-Database hosted on MongoDB Atlas
+Frontend communicates with backend using REST APIs
 
-Frontend communicates with backend via REST APIs
+Environment variables handle dev vs production URLs
 
-🎯 Learning Outcomes
+CORS configured for cross-platform deployment
 
-MERN stack end-to-end integration
+📤 How to Share This Project with Others
+✅ For normal users / friends
 
-REST API design
+Just send:
 
-MongoDB schema modelling
+https://your-frontend-name.vercel.app
+
+✅ For recruiters / interviewers
+
+Send all three:
+
+Live App: https://your-frontend-name.vercel.app
+Backend API: https://finance-racker.onrender.com
+GitHub Repo: https://github.com/VenuGopal100/finance_racker
+
+
+This proves:
+
+Real deployment
+
+Backend + database working
+
+Production-ready MERN project
+
+🎯 What I Learned from This Project
+
+End-to-end MERN stack integration
+
+REST API development
+
+MongoDB schema design
 
 Environment variable management
 
 CORS handling
 
-Real-world deployment (Vercel + Render)
+Cloud deployment (Vercel + Render)
 
-Production-ready project structure
+Debugging real production issues
 
 👤 Author
 
