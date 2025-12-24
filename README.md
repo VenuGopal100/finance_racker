@@ -8,10 +8,10 @@ This app helps users track income and expenses, set monthly budgets, and view fi
 🌐 Live Deployment (Try It Now)
 
 🔹 Live Frontend (User Interface)
-👉 https://your-frontend-name.vercel.app
+👉 https://finance-racker.vercel.app/dashboard
 
 🔹 Live Backend (API Service)
-👉 https://finance-racker.onrender.com
+👉https://finance-racker.onrender.com
 
 🔹 Sample API Endpoint
 👉 https://finance-racker.onrender.com/api/transactions
@@ -137,29 +137,7 @@ Environment variables manage dev vs production URLs
 CORS configured for cross-platform deployment
 
 📤 How to Share This Project with Others
-✅ For normal users / friends
 
-Just send:
-
-https://your-frontend-name.vercel.app
-
-✅ For recruiters / interviewers
-
-Send all three:
-
-Live App: https://your-frontend-name.vercel.app
-
-Backend API: https://finance-racker.onrender.com
-
-GitHub Repo: https://github.com/VenuGopal100/finance_racker
-
-This demonstrates:
-
-Real-world deployment
-
-Backend + database integration
-
-Production-ready MERN project
 
 🎯 What I Learned from This Project
 
