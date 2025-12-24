@@ -1,49 +1,27 @@
-// client/src/App.jsx
-// Main layout + routes for the app.
+import { Routes, Route, Navigate } from "react-router-dom";
+import Navbar from "./components/Navbar";
 
-import { NavLink, Route, Routes } from "react-router-dom";
-import DashboardPage from "./pages/DashboardPage.jsx";
-import TransactionsPage from "./pages/TransactionsPage.jsx";
+import HomePage from "./pages/HomePage";
+import DashboardPage from "./pages/DashboardPage";
+import TransactionsPage from "./pages/TransactionsPage";
+import BudgetsPage from "./pages/BudgetsPage";
 
 function App() {
   return (
-    <div className="app">
-      <header className="app-header">
-        <h1 className="logo">Finance Tracker</h1>
+    <>
+      <Navbar />
 
-        <nav className="nav">
-          <NavLink
-            to="/"
-            end
-            className={({ isActive }) =>
-              isActive ? "nav-link nav-link-active" : "nav-link"
-            }
-          >
-            Dashboard
-          </NavLink>
-          <NavLink
-            to="/transactions"
-            className={({ isActive }) =>
-              isActive ? "nav-link nav-link-active" : "nav-link"
-            }
-          >
-            Transactions
-          </NavLink>
-          {/* Later: Budgets, History etc. */}
-        </nav>
-      </header>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/home" element={<HomePage />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
+        <Route path="/transactions" element={<TransactionsPage />} />
+        <Route path="/budgets" element={<BudgetsPage />} />
 
-      <main className="app-main">
-        <Routes>
-          <Route path="/" element={<DashboardPage />} />
-          <Route path="/transactions" element={<TransactionsPage />} />
-        </Routes>
-      </main>
-
-      <footer className="app-footer">
-        <small>Built with MERN • Deployment-focused</small>
-      </footer>
-    </div>
+        {/* fallback */}
+        <Route path="*" element={<Navigate to="/dashboard" />} />
+      </Routes>
+    </>
   );
 }
 
