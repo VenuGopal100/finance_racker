@@ -1,9 +1,9 @@
-💰 Finance Tracker – MERN Stack Application
+Finance Tracker – MERN Stack Application
 
 A full-stack Finance Tracker web application built using the MERN stack.
-This app helps users track income and expenses, set monthly budgets, and view a financial summary through a clean, modern dashboard.
+This app helps users track income and expenses, set monthly budgets, and view financial summaries through a clean, modern dashboard.
 
-✅ Fully developed, integrated, and deployed.
+✅ Fully developed, integrated, and deployed
 
 🌐 Live Deployment (Try It Now)
 
@@ -24,7 +24,7 @@ Anyone can open the frontend link in a browser and use the application directly.
 
 ✅ View all transactions in real time
 
-✅ Monthly financial summary (income, expense, balance)
+✅ Monthly financial summary (income, expenses, balance)
 
 ✅ Set and update monthly budgets
 
@@ -63,7 +63,7 @@ finance_racker/
 ├── client/                 # Frontend (React + Vite)
 │   ├── src/
 │   │   ├── components/     # Reusable UI components
-│   │   ├── pages/          # Pages (Dashboard, Transactions, Budgets)
+│   │   ├── pages/          # Pages (Home, Dashboard, Transactions)
 │   │   ├── services/       # Axios API setup
 │   │   └── styles/         # Global & component styles
 │   └── vite.config.js
@@ -81,9 +81,9 @@ finance_racker/
 🌍 API Endpoints
 Transactions
 
-GET /api/transactions – Fetch all transactions
+GET /api/transactions → Fetch all transactions
 
-POST /api/transactions – Add a new transaction
+POST /api/transactions → Add a new transaction
 
 Monthly Summary
 
@@ -93,7 +93,7 @@ Budgets
 
 GET /api/budgets?month=MM&year=YYYY
 
-POST /api/budgets – Create or update monthly budget
+POST /api/budgets → Create or update monthly budget
 
 ⚙️ Environment Variables
 Backend (server/.env)
@@ -111,7 +111,7 @@ npm run dev
 
 
 Backend runs at:
-http://localhost:5000
+👉 http://localhost:5000
 
 2️⃣ Start Frontend
 cd client
@@ -120,7 +120,7 @@ npm run dev
 
 
 Frontend runs at:
-http://localhost:5173
+👉 http://localhost:5173
 
 🚢 Deployment Details
 
@@ -132,7 +132,7 @@ Database → MongoDB Atlas
 
 Frontend communicates with backend using REST APIs
 
-Environment variables handle dev vs production URLs
+Environment variables manage dev vs production URLs
 
 CORS configured for cross-platform deployment
 
@@ -148,15 +148,16 @@ https://your-frontend-name.vercel.app
 Send all three:
 
 Live App: https://your-frontend-name.vercel.app
+
 Backend API: https://finance-racker.onrender.com
+
 GitHub Repo: https://github.com/VenuGopal100/finance_racker
 
+This demonstrates:
 
-This proves:
+Real-world deployment
 
-Real deployment
-
-Backend + database working
+Backend + database integration
 
 Production-ready MERN project
 
@@ -180,4 +181,5 @@ Debugging real production issues
 
 Venu Gopal
 B.Tech Student | MERN Stack Developer
-GitHub: https://github.com/VenuGopal100
+
+🔗 GitHub: https://github.com/VenuGopal100
