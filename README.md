@@ -8,7 +8,7 @@ This app helps users track income and expenses, set monthly budgets, and view fi
 🌐 Live Deployment (Try It Now)
 
 🔹 Live Frontend (User Interface)
-👉 https://finance-racker.vercel.app/dashboard
+👉 https://finance-racker.vercel.app
 
 🔹 Live Backend (API Service)
 👉https://finance-racker.onrender.com
